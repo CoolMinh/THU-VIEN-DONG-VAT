@@ -46,15 +46,42 @@ class Game:
         return self.tinh_trang == 'sống' or self.tinh_trang == 'hạt mầm'
 
     @staticmethod
-    def ban_cay():
+    def cham_cay():
         ten = input("Nhập tên cây: ")
-        return ten
+        for i in range(Game.so_luong):
+            if game[i].ten == ten and game[i].check_tinh_trang():
+                nuoc_tang_them = int(input("Nhập lượng nước tăng thêm: "))
+                anh_sang_tang_them = int(input("bạn sẽ cho cây ở ngoài trời mấy tiếng: "))
+                if game[i].nuoc is not None and game[i].anh_sang is not None:
+                    game.[i].gia_thanh = (nuoc_tang_them, anh_sang_tang_them)
+                    print(game[1])
+                    return True
+                else:
+                    print("cây đã bán hoặc không tồn tại.hãy nhập lai tên")
+                    return False
+        print("cây không tồn tại hoặc không còn sống,hãy nhập lại tên")
+        return False
+    def ban_cay(self):
+        ten = input("Nhập tên cây: ")
+        for i in range(Game.so_luong):
+            if game[i].ten == ten and game[i].check_tinh_trang():
+                del game[i].gia_thanh
+                    break
+            else:
+                print('==== Hãy Nhập Tên ====')
+                return False
+        return True
 
-# Example usage
-if __name__ == "__main__":
-    cay = Game("Hoa hồng")
-    print(f"Tên cây: {cay.ten}")
-    print(f"Tình trạng: {cay.tinh_trang}")
-    print(f"Giá thành: {cay.gia_thanh}")
-    print(f"Số lượng cây: {Game.so_luong}")
-    print(f"Tiền còn lại: {Game.tien}")
+    def check_tinh_trang(self):
+        if self.tinh_trang=='sống' or 'hạt mầm':
+            return True
+        else:
+            return False
+    def get info(self):
+        return f"Tên: {self.ten}, Tình trạng: {self.tinh_trang}, Giá thành: {self.gia_thanh} vnd")
+game=[]
+while True:
+    print("chọn một trong cac lựa chọn sau")
+    
+          
+
