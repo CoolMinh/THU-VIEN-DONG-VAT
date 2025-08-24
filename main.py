@@ -34,7 +34,7 @@ if b1:
 if b2:
     with col6:
         st.write('Âm thanh')
-        audio=open('Dog barking sound continuously mp3 -- bhaiya choudlhary2635 - YouTube.mp3','rb')
+        audio=open('Dog barking sound continuously mp3 -- bhaiya choudhary2635 - YouTube.mp3','rb')
         st.audio(audio,format='audio/mp3')
 
         st.write('Video')
@@ -73,5 +73,5 @@ if b5:
         st.write('Video')
         st.video('https://www.youtube.com/watch?v=d3i7a6S0TFc')
     with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/b/b2/Male_and_female_chicken_sitting_together.jpg'
+        image='https://upload.wikimedia.org/wikipedia/commons/8/84/Male_and_female_chicken_sitting_together.jpg'
         st.image(image,caption='Con gà')
