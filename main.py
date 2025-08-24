@@ -4,51 +4,83 @@ st.set_page_config(page_title='Trắc nghiệm tính cách', page_icon=':questio
 
 st.title('Hãy chọn một con vật bạn yêu thích')
 col1, col2, col3, col4, col5 = st.columns(5)
+col6,col7=st.columns([2,1])
 
-Personality = {
-    'con mèo': 'Lựa chọn này cho thấy bạn chưa sẵn sàng bắt đầu công việc, bạn khao khát được nghỉ.',
-    'con chó': 'Bạn cảm nhận được sự hỗ trợ nhiệt tình của bạn bè và vì thế nên sẵn sàng giải quyết mọi vấn đề xảy ra.',
-    'con sư tử': 'Có thể thấy bạn là người có vẻ bề ngoài nổi bật. Bạn thu hút mọi người bằng vẻ bề ngoài hào nhoáng.',
-    'con ngựa': 'Có điều gì đó đang hạn chế sự tự do của bạn.',
-    'thiên nga': 'Hiện tại bạn có khoảng thời gian ngọt ngào, hãy cố gắng tận hưởng và kéo dài nó nhé.'
-}
+
+
 
 with col1:
     b1 = st.button('Con mèo')
 with col2:
     b2 = st.button('Con chó')
 with col3:
-    b3 = st.button('Con sư tử')
+    b3 = st.button('Con khỉ')
 with col4:
-    b4 = st.button('Con ngựa')
+    b4 = st.button('Con đại bàng')
 with col5:
-    b5 = st.button('Thiên nga')
+    b5 = st.button('con gà')
 
 if b1:
-    with st.expander('Con mèo'):
-        st.write(Personality['con mèo'])
+    with col6:
+        st.write('Âm thanh')
+        audio=open('_Cat Meow Sound Effect . Attract Cats, Sounds Cats Love.mp3','rb')
+        st.audio(audio,format='audio/mp3')
+        
+        st.write('Video')
+        video=open('https://www.youtube.com/watch?v=suaCbX5ji24','rb')   
+        st.video(video,format='video/mp4')
+    with col7:
+        image='https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg'
+        st.image(image,caption='Con mèo')
 if b2:
-    with st.expander('Con chó'):
-        st.write(Personality['con chó'])
-if b3:
-    with st.expander('Con sư tử'):
-        st.write(Personality['con sư tử'])
-if b4:
-    with st.expander('Con ngựa'):
-        st.write(Personality['con ngựa'])
-if b5:
-    with st.expander('Thiên nga'):
-        st.write(Personality['thiên nga'])
+    with col6:
+        st.write('Âm thanh')
+        audio=open('Dog barking sound continuously ,p3 == bhaiya choudlhary2635 - YouTube.mp3','rb')
+        st.audio=(audio,format='audio/mp3')
 
-with st.sidebar:
-    st.title('Trắc nghiệm tính cách')
-    if b1:
-        st.write('Con vật bạn chọn là con mèo')
-    if b2:
-        st.write('Con vật bạn chọn là con chó')
-    if b3:
-        st.write('Con vật bạn chọn là con sư tử')
-    if b4:
-        st.write('Con vật bạn chọn là con ngựa')
-    if b5:
-        st.write('Con vật bạn chọn là thiên nga')
+        st.write('Video')
+        video=open('https://www.youtube.com/watch?v=mXvCjXaTCkA','rb')
+        st.video(video,format='video/mp4')
+    with col7:
+        image='https://upload.wikimedia.org/wikipedia/commons/9/99/Brooks_Chase_Ranger_of_Jolly_Dogs_Jack_Russell.jpg'
+        st.image(image,caption='Con chó')
+if b3:
+    with col6:
+        st.write('Âm thanh')
+        audio=open('Monkey Noises SFX - YouTube.mp3','rb')
+        st.audio=(audio,format='audio/mp3')
+
+        st.write('Video')
+        video=open('https://www.youtube.com/watch?v=YfUMeMw1kY4','rb')
+        st.video(video,format='video/mp4')
+    with col7:
+        image='https://upload.wikimedia.org/wikipedia/commons/4/43/Bonnet_macaque_%28Macaca_radiata%29_Photograph_By_Shantanu_Kuveskar.jpg'
+        st.image(image,caption='Con khỉ')
+if b4:
+    with col6:
+        st.write('Âm thanh')
+        audio=open('Eagle Sound Effect - YouTube.mp3','rb')
+        st.audio=(audio,format='audio/mp3')
+
+        st.write('Video')
+        video=open('https://www.youtube.com/watch?v=K3oIF-SJCvI','rb')
+        st.video(video,format='video/mp4')
+    with col7:
+        image='https://upload.wikimedia.org/wikipedia/commons/6/60/Eagles_together.jpg'
+        st.image(image,caption='Con đại bàng')
+if b5:
+    with col6:
+        st.write('Âm thanh')
+        audio=open('Hen Sound To Attract Roosters - Chicken Sound Effects Free - YouTube.mp3','rb')
+        st.audio=(audio,format='audio/mp3')
+
+        st.write('Video')
+        video=open('https://www.youtube.com/watch?v=d3i7a6S0TFc','rb')
+        st.video(video,format='video/mp4')
+    with col7:
+        image='https://en.wikipedia.org/wiki/Chicken#/media/File:Male_and_female_chicken_sitting_together.jpg'
+        st.image(image,caption='Con gà')
+        
+
+        
+        
