@@ -27,8 +27,7 @@ if b1:
         st.audio(audio,format='audio/mp3')
         
         st.write('Video')
-        video=open('https://www.youtube.com/watch?v=suaCbX5ji24','rb')   
-        st.video(video,format='video/mp4')
+        st.video('https://www.youtube.com/watch?v=suaCbX5ji24')
     with col7:
         image='https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg'
         st.image(image,caption='Con mèo')
@@ -36,11 +35,10 @@ if b2:
     with col6:
         st.write('Âm thanh')
         audio=open('Dog barking sound continuously ,p3 == bhaiya choudlhary2635 - YouTube.mp3','rb')
-        st.audio=(audio,format='audio/mp3')
+        st.audio(audio,format='audio/mp3')
 
         st.write('Video')
-        video=open('https://www.youtube.com/watch?v=mXvCjXaTCkA','rb')
-        st.video(video,format='video/mp4')
+        st.video('https://www.youtube.com/watch?v=mXvCjXaTCkA')
     with col7:
         image='https://upload.wikimedia.org/wikipedia/commons/9/99/Brooks_Chase_Ranger_of_Jolly_Dogs_Jack_Russell.jpg'
         st.image(image,caption='Con chó')
@@ -48,11 +46,10 @@ if b3:
     with col6:
         st.write('Âm thanh')
         audio=open('Monkey Noises SFX - YouTube.mp3','rb')
-        st.audio=(audio,format='audio/mp3')
+        st.audio(audio,format='audio/mp3')
 
         st.write('Video')
-        video=open('https://www.youtube.com/watch?v=YfUMeMw1kY4','rb')
-        st.video(video,format='video/mp4')
+        st.video('https://www.youtube.com/watch?v=YfUMeMw1kY4')
     with col7:
         image='https://upload.wikimedia.org/wikipedia/commons/4/43/Bonnet_macaque_%28Macaca_radiata%29_Photograph_By_Shantanu_Kuveskar.jpg'
         st.image(image,caption='Con khỉ')
@@ -60,11 +57,10 @@ if b4:
     with col6:
         st.write('Âm thanh')
         audio=open('Eagle Sound Effect - YouTube.mp3','rb')
-        st.audio=(audio,format='audio/mp3')
+        st.audio(audio,format='audio/mp3')
 
         st.write('Video')
-        video=open('https://www.youtube.com/watch?v=K3oIF-SJCvI','rb')
-        st.video(video,format='video/mp4')
+        st.video('https://www.youtube.com/watch?v=K3oIF-SJCvI')
     with col7:
         image='https://upload.wikimedia.org/wikipedia/commons/6/60/Eagles_together.jpg'
         st.image(image,caption='Con đại bàng')
@@ -72,15 +68,10 @@ if b5:
     with col6:
         st.write('Âm thanh')
         audio=open('Hen Sound To Attract Roosters - Chicken Sound Effects Free - YouTube.mp3','rb')
-        st.audio=(audio,format='audio/mp3')
+        st.audio(audio,format='audio/mp3')
 
         st.write('Video')
-        video=open('https://www.youtube.com/watch?v=d3i7a6S0TFc','rb')
-        st.video(video,format='video/mp4')
+        st.video('https://www.youtube.com/watch?v=d3i7a6S0TFc')
     with col7:
-        image='https://en.wikipedia.org/wiki/Chicken#/media/File:Male_and_female_chicken_sitting_together.jpg'
+        image='https://upload.wikimedia.org/wikipedia/commons/b/b2/Male_and_female_chicken_sitting_together.jpg'
         st.image(image,caption='Con gà')
-        
-
-        
-        
