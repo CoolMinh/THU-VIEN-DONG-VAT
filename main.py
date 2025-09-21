@@ -7,7 +7,7 @@ st.set_page_config(page_title='Vương quốc mô hình', page_icon=':sparkles:'
 with st.sidebar:
     st.title('Vương quốc mô hình')
     st.header('Chào mừng bạn đến Vương quốc mô hình!')
-    st.image('PYDC4.13/hinh1.jpg')
+    st.image('https://inhat.vn/wp-content/uploads/2024/03/shop-mo-hinh-hai-phong-2-min-1-1-1023x683.jpg')
     st.write(
         'Chúng tôi chuyên bán các mô hình nhân vật hoạt hình chất lượng. '
         'Luôn cập nhật và đa dạng sản phẩm. Cam kết sự hài lòng của khách hàng '
