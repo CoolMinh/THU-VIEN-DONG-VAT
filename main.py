@@ -1,77 +1,107 @@
+import streamlit as st
 
-import streamlit as st 
-st.set_page_config(page_title='Trắc nghiệm tính cách', page_icon=':question:', layout='wide')
+# Cấu hình trang
+st.set_page_config(page_title='Vương quốc mô hình', page_icon=':sparkles:')
 
-st.title('Hãy chọn một con vật bạn yêu thích')
-col1, col2, col3, col4, col5 = st.columns(5)
-col6,col7=st.columns([2,1])
+# Sidebar
+with st.sidebar:
+    st.title('Vương quốc mô hình')
+    st.header('Chào mừng bạn đến Vương quốc mô hình!')
+    st.image('PYDC4.13/hinh1.jpg')
+    st.write(
+        'Chúng tôi chuyên bán các mô hình nhân vật hoạt hình chất lượng. '
+        'Luôn cập nhật và đa dạng sản phẩm. Cam kết sự hài lòng của khách hàng '
+        'với dịch vụ chuyên nghiệp. Hãy đến và khám phá thế giới mô hình tại Vương quốc mô hình!'
+    )
+    st.write(':house: :')
+    st.write(':phone: 123456789')
 
+# Tiêu đề chính
+st.title('Vương quốc mô hình')
 
-
-
+# Các nút chọn
+col1, col2, col3 = st.columns(3)
 with col1:
-    b1 = st.button('Con mèo')
+    b1 = st.button('Dragon Ball')
 with col2:
-    b2 = st.button('Con chó')
+    b2 = st.button('Naruto')
 with col3:
-    b3 = st.button('Con khỉ')
-with col4:
-    b4 = st.button('Con đại bàng')
-with col5:
-    b5 = st.button('con gà')
+    b3 = st.button('One Piece')
 
+# Nếu chọn Dragon Ball
 if b1:
+    st.header('Danh sách mô hình Dragon Ball')
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        st.image('https://i.ebayimg.com/images/g/~W8AAOSwIYBmVZIn/s-l1600.webp', caption='Goku Ultra Instinct – Mã số: 001')
+    with col5:
+        st.image('https://i.pinimg.com/736x/dd/24/6a/dd246adc152d309e9121a69f0f90cd7c.jpg', caption='Vegeta Super Saiyan – Mã số: 002')
     with col6:
-        st.write('Âm thanh')
-        audio=open('_Cat Meow Sound Effect . Attract Cats, Sounds Cats Love.mp3','rb')
-        st.audio(audio,format='audio/mp3')
-        
-        st.write('Video')
-        st.video('https://www.youtube.com/watch?v=suaCbX5ji24')
-    with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg'
-        st.image(image,caption='Con mèo')
+        st.image('https://i.pinimg.com/736x/d0/e5/cd/d0e5cdcccdd1ca646e1ed18d031d00d1.jpg', caption='Picolo – Mã số: 003')
+
+# Nếu chọn Naruto
 if b2:
+    st.header('Danh sách mô hình Naruto')
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        st.image('https://i.pinimg.com/1200x/4d/06/c0/4d06c0f85dbd9993f4ac8df38d905e4e.jpg', caption='Uzumaki Naruto – Mã số: 001')
+    with col5:
+        st.image('https://i.pinimg.com/1200x/01/d9/4a/01d94a9fc24a88c3f2f57e2131236836.jpg', caption='Uchiha Sasuke – Mã số: 002')
     with col6:
-        st.write('Âm thanh')
-        audio=open('Dog barking sound continuously mp3 -- bhaiya choudhary2635 - YouTube.mp3','rb')
-        st.audio(audio,format='audio/mp3')
+        st.image('https://i.pinimg.com/1200x/79/2d/79/792d79fa394c4c9df660ab6885a78f75.jpg', caption='Hatake Kakashi – Mã số: 003')
 
-        st.write('Video')
-        st.video('https://www.youtube.com/watch?v=mXvCjXaTCkA')
-    with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/9/99/Brooks_Chase_Ranger_of_Jolly_Dogs_Jack_Russell.jpg'
-        st.image(image,caption='Con chó')
+# Nếu chọn One Piece
 if b3:
+    st.header('Danh sách mô hình One Piece')
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        st.image('https://i.pinimg.com/1200x/03/9e/c8/039ec8ba6235b336cad62f4d5ea9151a.jpg', caption='Monkey D. Luffy – Mã số: 001')
+    with col5:
+        st.image('https://i.pinimg.com/1200x/f4/ba/e1/f4bae1a40e2e3b89e5d3158108b425c8.jpg', caption='Roronoa Zoro – Mã số: 002')
     with col6:
-        st.write('Âm thanh')
-        audio=open('Monkey Noises SFX - YouTube.mp3','rb')
-        st.audio(audio,format='audio/mp3')
+        st.image('https://i.pinimg.com/736x/f1/96/e4/f196e41afd462282c6412e4aa05d4227.jpg', caption='Vinsmoke Sanji – Mã số: 003')
 
-        st.write('Video')
-        st.video('https://www.youtube.com/watch?v=YfUMeMw1kY4')
-    with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/4/43/Bonnet_macaque_%28Macaca_radiata%29_Photograph_By_Shantanu_Kuveskar.jpg'
-        st.image(image,caption='Con khỉ')
-if b4:
-    with col6:
-        st.write('Âm thanh')
-        audio=open('Eagle Sound Effect - YouTube.mp3','rb')
-        st.audio(audio,format='audio/mp3')
+  st.header('Đặt hàng')
+  with st.form('đơn đặt hàng'):
 
-        st.write('Video')
-        st.video('https://www.youtube.com/watch?v=K3oIF-SJCvI')
-    with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/6/60/Eagles_together.jpg'
-        st.image(image,caption='Con đại bàng')
-if b5:
-    with col6:
-        st.write('Âm thanh')
-        audio=open('Hen Sound To Attract Roosters - Chicken Sound Effects Free - YouTube.mp3','rb')
-        st.audio(audio,format='audio/mp3')
+    topics = ('Dragon Ball', 'Naruto', 'One Piece')
+    option_topic = st.selectbox('Chọn loại mô hình:', topics)
 
-        st.write('Video')
-        st.video('https://www.youtube.com/watch?v=d3i7a6S0TFc')
-    with col7:
-        image='https://upload.wikimedia.org/wikipedia/commons/8/84/Male_and_female_chicken_sitting_together.jpg'
-        st.image(image,caption='Con gà')
+    codes = ('001', '002', '003')
+    option_code = st.selectbox('Chọn mã số:', codes)
+
+
+
+  nums = st.slider('Số lượng bạn muốn đặt:', 0, 10, 0)
+  name = st.text_input('Họ và tên')
+  phone = st.text_input('Số điện thoại nhà riêng')
+  address = st.text_input('Địa chỉ giao hàng')
+
+
+  option_topic = st.selectbox('Loại mô hình:', ['Robot', 'Xe hơi', 'Máy bay'])
+  option_code = st.text_input('Mã số sản phẩm')
+
+
+  bill = {
+      'Loại mô hình:': option_topic,
+      'Mã số:': option_code,
+      'Số lượng:': nums,
+      'Họ tên khách hàng:': name,
+      'Số điện thoại liên hệ:': phone,
+      'Địa chỉ giao hàng:': address
+  }
+
+  submitted = st.form_submit_button("Xác nhận")
+  if submitted:
+      st.header('Bạn đã chọn:')
+      for x, y in bill.items():
+          st.write(x, y)
+
+
+  print_bill = st.checkbox('In hoá đơn')
+  if print_bill:
+      ans = ''
+      for x in bill:
+          ans += str(x) + ' ' + str(bill[x]) + '\n'
+      st.download_button('In hoá đơn', ans)
+
