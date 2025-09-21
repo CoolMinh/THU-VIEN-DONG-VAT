@@ -61,8 +61,8 @@ if b3:
     with col6:
         st.image('https://i.pinimg.com/736x/f1/96/e4/f196e41afd462282c6412e4aa05d4227.jpg', caption='Vinsmoke Sanji – Mã số: 003')
 
-  st.header('Đặt hàng')
-  with st.form('đơn đặt hàng'):
+st.header('Đặt hàng')
+with st.form('đơn đặt hàng'):
 
     topics = ('Dragon Ball', 'Naruto', 'One Piece')
     option_topic = st.selectbox('Chọn loại mô hình:', topics)
@@ -70,38 +70,30 @@ if b3:
     codes = ('001', '002', '003')
     option_code = st.selectbox('Chọn mã số:', codes)
 
+    nums = st.slider('Số lượng bạn muốn đặt:', 0, 10, 0)
+    name = st.text_input('Họ và tên')
+    phone = st.text_input('Số điện thoại nhà riêng')
+    address = st.text_input('Địa chỉ giao hàng')
 
+    bill = {
+        'Loại mô hình:': option_topic,
+        'Mã số:': option_code,
+        'Số lượng:': nums,
+        'Họ tên khách hàng:': name,
+        'Số điện thoại liên hệ:': phone,
+        'Địa chỉ giao hàng:': address
+    }
 
-  nums = st.slider('Số lượng bạn muốn đặt:', 0, 10, 0)
-  name = st.text_input('Họ và tên')
-  phone = st.text_input('Số điện thoại nhà riêng')
-  address = st.text_input('Địa chỉ giao hàng')
+    submitted = st.form_submit_button("Xác nhận")
+    if submitted:
+        st.header('Bạn đã chọn:')
+        for x, y in bill.items():
+            st.write(x, y)
 
-
-  option_topic = st.selectbox('Loại mô hình:', ['Robot', 'Xe hơi', 'Máy bay'])
-  option_code = st.text_input('Mã số sản phẩm')
-
-
-  bill = {
-      'Loại mô hình:': option_topic,
-      'Mã số:': option_code,
-      'Số lượng:': nums,
-      'Họ tên khách hàng:': name,
-      'Số điện thoại liên hệ:': phone,
-      'Địa chỉ giao hàng:': address
-  }
-
-  submitted = st.form_submit_button("Xác nhận")
-  if submitted:
-      st.header('Bạn đã chọn:')
-      for x, y in bill.items():
-          st.write(x, y)
-
-
-  print_bill = st.checkbox('In hoá đơn')
-  if print_bill:
-      ans = ''
-      for x in bill:
-          ans += str(x) + ' ' + str(bill[x]) + '\n'
-      st.download_button('In hoá đơn', ans)
+print_bill = st.checkbox('In hoá đơn')
+if print_bill:
+    ans = ''
+    for x in bill:
+        ans += str(x) + ' ' + str(bill[x]) + '\n'
+    st.download_button('In hoá đơn', ans)
 
